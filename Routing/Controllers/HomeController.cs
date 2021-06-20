@@ -23,30 +23,8 @@ namespace Routing.Controllers
             return View();
         }
 
-        //pass details to the DetailView through  ViewBag.Data (data doesn't mean anything)
-        //can the pattern in endpoints.mapcontrollerroute be a variable??
 
-    /*    public IActionResult WebsiteOne([FromQuery] string myQuery) {
-            return View("DetailView");
-    }
-
-        public IActionResult WebsiteTwo([FromQuery] string myQuery)
-        {
-            return View("DetailView");
-        }
-
-        public IActionResult WebsiteThree([FromQuery] string myQuery)
-        {
-            return View("DetailView");
-        }*/
-
-
- /*       public IActionResult GenericQueryRoute(string pattern, [FromQuery] string query)
-        {
-            return View("DetailView");
-        }*/
-
-        public IActionResult GenericRoute(string stringOne, string stringTwo, string stringThree, string stringFour, string stringFive, string stringSix)
+        public IActionResult GenericRoute(string stringOne, string optTwo, string optThree, string optFour, string optFive, string optSix)
         {
             return View("DetailView");
         }

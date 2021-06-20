@@ -50,46 +50,15 @@ namespace Routing
 
             app.UseEndpoints(endpoints =>
             {
-                /*            endpoints.MapControllerRoute(
-                                name: "websiteone",
-                                pattern: "watch",
-                                defaults: new { controller = "Home", action = "WebsiteOne" });
-
-
-                            endpoints.MapControllerRoute(
-                                name: "websitetwo",
-                                pattern: "/gp/buyagain",
-                                defaults: new { controller = "Home", action = "WebsiteTwo" });
-
-
-                            endpoints.MapControllerRoute(
-                                name: "websitethree",
-                                pattern: "/HighKey-Snacks-Keto-Mini-Cookies/dp/B07JYS45BT",
-                                defaults: new { controller = "Home", action = "WebsiteThree" });*/
-
-
-
-                /*                endpoints.MapControllerRoute(
-                                name: "generic query string route",
-                                pattern: "/{pattern}{query}",
-                                defaults: new { Controller = "Home", action = "GenericQueryRoute" });*/
 
                 endpoints.MapControllerRoute(
-                  name: "default",
-                  pattern: "{controller=Home}/{action=Index}");
-
-                endpoints.MapControllerRoute(
-                name: "generic query string route",
-                pattern: "/{stringOne?}/{stringTwo?}/{stringThree?}/{stringFour?}/{stringFive?}/{stringSix?}",
+                name: "generic route",
+                pattern: "/{stringOne}/{optTwo?}/{optThree?}/{optFour?}/{optFive?}/{optSix?}",
                 defaults: new { Controller = "Home", action = "GenericRoute" });
 
-
-/*
                 endpoints.MapControllerRoute(
-               name: "default",
-               pattern: "{controller=Home}/{action=Index}/{id?}");*/
-
-
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}");
 
             });
         }
