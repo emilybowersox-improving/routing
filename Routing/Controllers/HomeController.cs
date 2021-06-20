@@ -23,12 +23,17 @@ namespace Routing.Controllers
             return View();
         }
 
+ 
 
         public IActionResult GenericRoute(string stringOne, string optTwo, string optThree, string optFour, string optFive, string optSix)
         {
+            var myString = stringOne;
+
+            ViewBag.Data = myString;
             return View("DetailView");
         }
 
+   
 
         public IActionResult Privacy()
         {
