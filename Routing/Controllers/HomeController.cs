@@ -27,9 +27,8 @@ namespace Routing.Controllers
 
         public IActionResult GenericRoute(string stringOne, string optTwo, string optThree, string optFour, string optFive, string optSix)
         {
-            var myString = stringOne;
-
-            ViewBag.Data = myString;
+           
+            ViewBag.Data = stringOne + optTwo + optThree + optFour + optFive + optSix;
             return View("DetailView");
         }
 
