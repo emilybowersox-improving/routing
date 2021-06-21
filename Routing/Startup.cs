@@ -56,9 +56,17 @@ namespace Routing
                 pattern: "/{stringOne}/{optTwo?}/{optThree?}/{optFour?}/{optFive?}/{optSix?}",
                 defaults: new { Controller = "Home", action = "GenericRoute" });
 
+ /*               endpoints.MapControllerRoute(
+                name: "watch",
+                pattern: "watch",
+                new { routeName = "watch", controller = "Home", action = "Watch" });
+*/
                 endpoints.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+
 
             });
         }
