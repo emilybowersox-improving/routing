@@ -39,14 +39,16 @@ namespace Routing.Controllers
         /*          URL = protocol://site/path(s)/?querystring*/
         /*          path- can have multiple paths seperated by slashes, but never by unescaped question marks */
         /*          Routing is concerned with the Path part- not the site*/
-        public IActionResult Watch()
+        public IActionResult Watch(ThisObject parameters)
+/*            use model binding to get multiple parameters instead of having 10 parameters- create a class for ThisObject with getters and setters 
+            no special configuration- just have to create the class with those values (uses this for the DateFirstPost route)*/
+            then do parameters.property etc. for each 
         {
             /*          it does this below for you automatically- but you can access them here (grab the query here through ViewBag.Query)*/
             ViewBag.Path = Request.Path.ToString();
             ViewBag.RouteValues = Request.RouteValues;
             ViewBag.Query = Request.Query;
-            Request.
-
+     
             return View("SharedTemplate");
         }
    
